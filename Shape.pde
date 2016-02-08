@@ -13,7 +13,7 @@ class Shape
       matrix[blockNums[i]%n][blockNums[i]/n] = true;
     this.c = c;
   }
-   
+   //next shape
   Shape(Shape other)
   {
     matrix = new boolean[other.matrix.length][other.matrix.length];
