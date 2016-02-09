@@ -21,8 +21,8 @@ class Grid
       for (int j = 0; j < rows; ++j)
         colors[i][j] = 0;
   }
-   //clears the board( used in control p5 button
-   void clear()
+   
+  void clear()
   {
     for (int i = 0; i < cols; ++i)
      for (int j = 0; j < rows; ++j)
