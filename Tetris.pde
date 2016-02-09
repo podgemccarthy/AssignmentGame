@@ -15,6 +15,7 @@ void setup()
   shapes[6] = new Shape(4, new int[] {4,5,9,10}, RED);  // this is the Z shape
 }
 
+//all variables 
 //colours for shapes
 import controlP5.*;
 int AQUA = color(0,255,255);

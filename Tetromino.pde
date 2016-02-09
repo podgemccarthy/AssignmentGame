@@ -1,5 +1,6 @@
 class Tetromino
 {
+  //creates instance of shape
   Shape shape;
   int x, y;
   int final_row;
