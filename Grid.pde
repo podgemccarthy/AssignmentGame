@@ -22,6 +22,7 @@ class Grid
         colors[i][j] = 0;
   }
    
+   //used for clearing board when play again is hit
   void clear()
   {
     for (int i = 0; i < cols; ++i)

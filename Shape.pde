@@ -12,7 +12,7 @@ class Shape {
       matrix[blockNums[i]%n][blockNums[i]/n] = true;
     this.c = c;
   }
-   //next shape 
+   //next shape ready for loading
   Shape(Shape other) {
     matrix = new boolean[other.matrix.length][other.matrix.length];
     for (int x = 0; x < matrix.length; ++x)
@@ -20,7 +20,7 @@ class Shape {
         matrix[x][y] = other.matrix[x][y];
     this.c = other.c;
   }
-   // this is the area function that creates the preview
+   // this is the area where the preview is
   void preview() {
     int startJ = 1;  // the preview grid is only 4X2, so we need to find where the block start
     for (int i = 0; i < matrix.length; ++i)
