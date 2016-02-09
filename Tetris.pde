@@ -7,6 +7,7 @@
 */
  
 import controlP5.*;
+//colours for different blocks
 int CYAN = color(0,255,255);
 int ORANGE = color(255,165,0);
 int YELLOW = color(255,255,0);
@@ -16,10 +17,13 @@ int RED = color(255,0,0);
 int GREEN = color(0,255,0);
  
 ControlP5 controlP5;
+// class instances
 Grid board, preview;
 Tetromino curr;
 Shape next;
 Shape[] shapes = new Shape[7];
+
+//other variables
 int timer = 20;
 int currTime = 0;
 int score = 0;
