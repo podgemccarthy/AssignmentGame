@@ -1,5 +1,6 @@
 /*
- 
+  controls for the game 
+  Best of luck!!
   LEFT/RIGHT/DOWN to move
   UP - flip
   SPACE - hard drop (drop immediately)
