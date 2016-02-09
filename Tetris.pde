@@ -25,7 +25,10 @@ int BLUE = color(0,0,255);
 int RED = color(255,0,0);
 int GREEN = color(0,255,0);
 ControlP5 controlP5;
-
+ControlP5 controlP5;
+Grid board, preview;
+Tetromino curr;
+Shape next;
 Shape[] shapes = new Shape[7];
 
 
@@ -35,3 +38,5 @@ int score = 0;
 int lines = 0;
 int level = 1;
 
+int SPEED_DECREASE = 2;
+boolean game_over = false;
