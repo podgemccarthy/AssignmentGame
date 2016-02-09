@@ -56,6 +56,7 @@ class Grid
     }
   }
    
+   //fills the falling blocks
   void fillSquare(int col, int row, color c) {
     if (col < 0 || col >= cols || row < 0 || row >= rows)
       return;
@@ -75,6 +76,7 @@ class Grid
     rect(x + col*(myWidth/cols), y + row*(myHeight/rows), myWidth/cols, myHeight/rows);
   }
    
+   //ends that blocks turn
   void endTurn() 
   {
     for (int i = 0; i < curr.shape.matrix.length; ++i)
@@ -88,6 +90,7 @@ class Grid
       loadNext();
   }
    
+  // checks if line is cleared 
   boolean checkLines() {
     clearedRows.clear();
     for (int j = 0; j < rows; ++j) {
