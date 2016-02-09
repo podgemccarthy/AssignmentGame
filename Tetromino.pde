@@ -15,6 +15,7 @@ class Tetromino
    
   color getColor() { return shape.c; }
    
+  //moves the shape left
   void left() 
   {
     if (isLegal(shape.matrix, x - 1, y))
@@ -23,7 +24,7 @@ class Tetromino
       x -= 2;
     update();
   }
-   
+  // moves the block right
   void right() {
     if (isLegal(shape.matrix, x + 1, y))
       x++;
