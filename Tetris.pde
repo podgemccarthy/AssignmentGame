@@ -94,12 +94,13 @@ void loadNext()
   next = shapes[(int)random(7)];
   currTime = 0;
 }
- 
+ //used to move blocks called from Tetronimo class
 void keyPressed() 
 {
   if (curr == null || game_over)
     return;
-  switch(keyCode) {
+  switch(keyCode) 
+  {
     case LEFT : curr.left(); break;
     case RIGHT : curr.right(); break;
     case UP : curr.rotate(); break;

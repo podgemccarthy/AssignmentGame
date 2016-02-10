@@ -15,6 +15,7 @@ class Tetromino
    
   color getColor() { return shape.c; }
    
+   // mechanics to move blocks
   //moves the shape left
   void left() 
   {

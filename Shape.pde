@@ -14,7 +14,8 @@ class Shape
     this.c = c;
   }
    //next shape ready for loading
-  Shape(Shape other) {
+  Shape(Shape other) 
+  {
     matrix = new boolean[other.matrix.length][other.matrix.length];
     for (int x = 0; x < matrix.length; ++x)
       for (int y = 0; y < matrix.length; ++y)
