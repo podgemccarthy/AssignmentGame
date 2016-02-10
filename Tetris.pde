@@ -50,6 +50,7 @@ void setup() {
   shapes[4] = new Shape(4, new int[] {5,6,8,9}, GREEN);  // this is the S shape
   shapes[5] = new Shape(3, new int[] {1,3,4,5,}, PURPLE);  // this is the T
   shapes[6] = new Shape(4, new int[] {4,5,9,10}, RED);  // this is the Z shape
+  
   board = new Grid(20, 20, 321, 642, 20, 10);
   preview = new Grid(355, 20, 116, 58, 2, 4);
   next = shapes[(int)random(7)];

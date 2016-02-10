@@ -1,4 +1,5 @@
-class Shape {
+class Shape 
+{
   boolean[][] matrix;
   int c;
    
@@ -20,8 +21,9 @@ class Shape {
         matrix[x][y] = other.matrix[x][y];
     this.c = other.c;
   }
-   // this is the area where the preview is
-  void preview() {
+   // this is the next blocks preview
+  void preview() 
+  {
     int startJ = 1;  // the preview grid is only 4X2, so we need to find where the block start
     for (int i = 0; i < matrix.length; ++i)
       if (matrix[i][0])

@@ -126,6 +126,7 @@ class Grid
     }
   }
    
+   //check position of block falling
   boolean isOccupied(int x, int y) {
     if (y < 0 && x < cols && x >= 0) // allow movement/flipping to spaces above the board
       return false;
