@@ -39,7 +39,8 @@ class Grid
       for (int j = 0; j < rows; ++j)
         fillSquare(i, j, colors[i][j]);
     // line clear animation
-    if (animateCount >= 0) {
+    if (animateCount >= 0) 
+    {
       //calculate a background that smoothly oscillates between black and white
       int c = (animateCount < 255) ? animateCount : 255 - animateCount%255;
       if (clearedRows.size() == 4)
@@ -48,7 +49,8 @@ class Grid
         for (int i = 0; i < cols; ++i)
           fillSquare(i, row, color(c, 200));
       animateCount += 10;
-      if (animateCount > 2*255) {
+      if (animateCount > 2*255) 
+      {
         // stop animation, clear the lines, and load the next Tetromino
         animateCount = -1;
         eraseCleared();
@@ -58,7 +60,8 @@ class Grid
   }
    
    //fills the falling blocks
-  void fillSquare(int col, int row, color c) {
+  void fillSquare(int col, int row, color c) 
+  {
     if (col < 0 || col >= cols || row < 0 || row >= rows)
       return;
     noStroke();
@@ -92,9 +95,11 @@ class Grid
   }
    
   // checks if line is cleared 
-  boolean checkLines() {
+  boolean checkLines() 
+  {
     clearedRows.clear();
-    for (int j = 0; j < rows; ++j) {
+    for (int j = 0; j < rows; ++j) 
+    {
       int count = 0;
       for (int i = 0; i < cols; ++i)
         if (isOccupied(i, j))
@@ -105,7 +110,8 @@ class Grid
     if (clearedRows.isEmpty())
       return false;
        
-    if (lines/10 < (lines + clearedRows.size())/10) {
+    if (lines/10 < (lines + clearedRows.size())/10)
+    {
       level++;
       timer -= SPEED_DECREASE;
     }
@@ -114,9 +120,12 @@ class Grid
     return true;
   }
    //clears the line
-  void eraseCleared() {
-    for (int row : clearedRows) {
-      for (int j = row - 1; j > 0; --j) {
+  void eraseCleared() 
+  {
+    for (int row : clearedRows) 
+    {
+      for (int j = row - 1; j > 0; --j) 
+      {
         int[] rowCopy = new int[cols];
         for (int i = 0; i < cols; ++i)
           rowCopy[i] = colors[i][j];
@@ -127,7 +136,8 @@ class Grid
   }
    
    //check position of block falling
-  boolean isOccupied(int x, int y) {
+  boolean isOccupied(int x, int y) 
+  {
     if (y < 0 && x < cols && x >= 0) // allow movement/flipping to spaces above the board
       return false;
     return (x >= cols || x < 0 || y >= rows || colors[x][y] != 0);

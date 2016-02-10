@@ -3,10 +3,10 @@
   Tetris 
   --------------------------
   Controls for the game 
-  Best of luck!!
   LEFT/RIGHT/DOWN to move
   UP - flip
-  SPACE - hard drop (drop immediately)
+  SPACE - drop immediately
+   Best of luck!!
 */
  
 import controlP5.*;
@@ -36,7 +36,8 @@ int level = 1;
 int SPEED_DECREASE = 2;
 boolean game_over = false;
  
-void setup() {
+void setup() 
+{
   size(500, 690, P2D);
   textSize(25);
   //CREATE THE PLAY AGAIN BUTTON
@@ -87,7 +88,8 @@ void draw()
   text("SCORE\n" + score, width - 150, 280);
 }
  //loads next shape
-void loadNext() {
+void loadNext()
+{
   curr = new Tetromino(next);
   next = shapes[(int)random(7)];
   currTime = 0;
